@@ -66,6 +66,30 @@
 							<use href="./images/symbol-defs.svg#icon-close-black"></use>
 						</svg>
 					</button>
+					<h4 class="title">Оставьте свои данные, мы вам перезвоним</h4>
+					<form class="modal-form" name="modal-form" autocomplete="on" novalidate>
+						<div class="form-field">
+							<label for="username">Имя</label>
+							<input class="username" type="text" name="username" id="username">
+						</div>
+						<div class="form-field">
+							<label for="phone">Телефон</label>
+							<input class="phone" type="tel" name="phone" id="phone" autocomplete="">
+						</div>
+						<div class="form-field">
+							<label for="email">Почта</label>
+							<input class="email" type="email" name="email" id="email">
+						</div>
+						<div class="form-field">
+							<label for="coment">Комментарий></label>
+							<textarea class="coment" name="coment" id="coment" rows="5" placeholder="Введите текст"></textarea>
+						</div>
+						<div class="checkbox-field">
+							<input type="checkbox" name="agreemant">
+							<label for="">Соглашаюсь с рассылкой и принимаю <span>Условия договора</span></label>
+						</div>
+						<button type="submit" class="button primary">Отправить</button>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -415,6 +439,20 @@
 						</a>
 					</li>
 				</ul>
+			</div>
+			<div class="box-form">
+				<h3 class="title">Подпишитесь на рассылку</h3>
+				<form class="footer-form">
+					<label class="footer-label">
+						<input class="form-input" type="email" name="email" placeholder="E-mail">
+					</label>
+					<button class="button primary" type="submit">
+						Подписаться
+						<svg class="icon" height="24" width="24">
+							<use href="./images/symbol-defs-1.svg#icon-icon-send"></use>
+						</svg>
+					</button>
+				</form>
 			</div>
 		</div>
 	</footer>
