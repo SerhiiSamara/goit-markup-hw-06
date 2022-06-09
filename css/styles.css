@@ -229,11 +229,11 @@ h3 {
   left: 50%;
 
   min-width: 528px;
-  min-height: 581px;
   padding: 40px;
 
   transform: translate(-50%, -50%);
   background-color: var(--primary-background-color);
+  z-index: 10;
 }
 
 .modal > .button-close {
@@ -309,13 +309,18 @@ h3 {
   padding: 12px 16px;
 }
 
-.form-field .input {
+.form-field input {
   height: 40px;
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field > .input {
+  color: var(--primary-text-color);
+  font-size: 12px;
 }
 
 .form-field textarea::placeholder {
@@ -339,7 +344,6 @@ h3 {
 .form-field > .input:hover {
   border-color: var(--accent-color);
   outline: 0;
-  cursor: pointer;
 }
 
 .form-field:checked,
@@ -380,6 +384,10 @@ h3 {
   letter-spacing: 0.03em;
 }
 
+.checkbox-lable a {
+  text-decoration: none;
+}
+
 .checkbox-lable span {
   margin-left: 5px;
 
@@ -390,6 +398,10 @@ h3 {
   text-decoration-line: underline;
 }
 
+.checkbox-lable span:hover {
+  text-decoration-line: none;
+}
+
 .checkbox:checked + .checkbox-icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
@@ -397,11 +409,17 @@ h3 {
   background-origin: border-box;
 }
 
+.checkbox:focus + .checkbox-icon {
+  border-color: var(--accent-color);
+}
+
 .modal-form .button {
   display: block;
 
   margin-left: auto;
   margin-right: auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero > .container {
@@ -557,6 +575,7 @@ h3 {
 
 .activities-list > .item:not(:last-child) {
   margin-right: 30px;
+  z-index: 0;
 }
 
 /* section team */
